@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(UlillilliaisticAimTrainer)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS True)
+
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
