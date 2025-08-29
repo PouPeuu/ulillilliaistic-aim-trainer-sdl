@@ -1,23 +1,23 @@
 #ifndef TEXT_H
 #define TEXT_H
 
+#include <SDL3_ttf/SDL_ttf.h>
 #include <string>
 
 class Text {
-	private:
+	protected:
 		std::string text;
 		int size;
-		std::string font_path;
+		TTF_Font *font;
+		SDL_FColor color;
 	public:
-		Text(std::string text = "", int size = 12, std::string font_path = "res/");
+		Text(TTF_Font *font, std::string text = "", int size = 12, SDL_FColor color = {0, 0, 0, 0});
 
 		void setText(std::string text);
 		void setSize(int size);
-		void setFont(std::string font_path);
+		void setFont(TTF_Font *font);
 
-		std::string getText();
-		int getSize();
-		std::string getFont();
+		TTF_Font *getFont();
 };
 
 #endif

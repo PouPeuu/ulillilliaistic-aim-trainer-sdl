@@ -3,7 +3,7 @@
 
 #include <SDL3/SDL_render.h>
 class Prop {
-	private:
+	protected:
 		int x, y;
 	public:
 		virtual void render(SDL_Renderer *renderer) = 0;

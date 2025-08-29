@@ -6,7 +6,9 @@
 
 class TextProp : Prop, Text {
 	public:
-		TextProp(int x, int y);
+		TextProp(int x, int y, std::string text = "", int size = 12, TTF_Font *font);
+
+		void render(SDL_Renderer *renderer) override;
 };
 
 #endif
